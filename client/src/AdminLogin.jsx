@@ -14,7 +14,7 @@ function AdminLogin() {
     setMessage("Logging in...");
 
     try {
-      const response = await fetch("http://localhost:5000/api/admin/login", {
+      const response = await fetch("https://smart-clinic-backend-t8tf.onrender.com/api/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,9 +31,9 @@ function AdminLogin() {
         localStorage.setItem("admin_token", data.token);
         setMessage("✅ Admin login successful!");
 
-setTimeout(() => {
-  navigate("/admin");
-}, 1000);
+        setTimeout(() => {
+         navigate("/admin");
+            }, 1000);
       } else {
         setMessage(`❌ ${data.message}`);
       }

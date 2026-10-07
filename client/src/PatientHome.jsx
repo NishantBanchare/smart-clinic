@@ -30,7 +30,7 @@ function PatientHome() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/appointments",
+        "https://smart-clinic-backend-t8tf.onrender.com/api/appointments",
         {
           method: "POST",
           headers: {
